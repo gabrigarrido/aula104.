@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+}
+nav{
+    width: 100vw;
+    height: 50px;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+nav img{
+    width:30px;
+
+}
+nav ul{
+    display:none;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+    list-style: none;
+
+}
+nav ul a{
+    color:orange;
+    text-decoration: none;
+    font-size: 14pt;
+}
+
+#main{
+display: grid;
+grid-template-areas: "header header"
+                    "section section"
+                    "section section"
+                    "footer footer";
+grid-auto-rows: 120px 200px 100px 80px;
+
+}
+header{
+    background-color: brown;
+    grid-area: header;
+    padding: 0 20px 40px 20px;
+
+}
+header p{
+    color: white;
+    margin-bottom: 20px;
+
+}
+header img{
+    display:none;
+    width: 40%;
+    height:90%;
+    border-radius:100px;
+}
+section{
+    grid-area: section;
+    background-color: yellow;
+}
+section img{
+    width:80%;
+    height: auto;
+    max-width: 503px;
+    max-height:90%;
+
+}
+
+footer{
+    grid-area: footer;
+    background-color: green;
+}
+
+@media (min-width: 425px){
+    header p{
+         display:none;
+
+    }
+    header img{
+        display:flex;
+    }
+}
+
+
+
+@media (min-width:1024px){
+   #main{
+       grid-template-areas: "header header"
+                            "section section"
+                            "section section"
+                            "footer footer";
+   }
+   @media(min-width:1140px){
+    #main {
+        grid-template-areas: "header header"
+                            "section section"
+                            "section section"
+                            "footer footer"
+
+   }
+
+
+
+
+
+
